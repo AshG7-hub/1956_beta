@@ -3865,7 +3865,12 @@ focus_tree = {
 
 		available = {
 			is_ally_with = JAP
-			is_neighbor_of = MON
+			OR = {
+				is_neighbor_of = MON
+				any_controlled_state = {
+					is_core_of = MON
+									   }
+				 }
 		}
 		
 		prerequisite = { 
